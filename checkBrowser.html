@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查浏览器类型</title>
+</head>
+<body>
+<div id="browserType"></div>
+</body>
+<script>
+    (function () {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        let element = document.getElementById("browserType");
+        if (userAgent.indexOf("OPR") > -1||userAgent.indexOf("Opera") > -1) {
+            element.innerHTML = "Opera";
+            return;
+        }//判断是否Opera浏览器
+        else if (userAgent.indexOf("Firefox") > -1) {
+            element.innerHTML = "FF";
+            return;
+        } //判断是否Firefox浏览器
+        else   if (userAgent.indexOf("Chrome") > -1){
+            element.innerHTML = "Chrome";
+            return;
+        }
+        else   if (userAgent.indexOf("Safari") > -1) {
+            element.innerHTML = "Safari";
+            return;
+        } //判断是否Safari浏览器
+        else{
+            element.innerHTML = "其他";
+        }
+    })()
+</script>
+</html>
