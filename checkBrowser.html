@@ -11,24 +11,20 @@
     (function () {
         var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
         let element = document.getElementById("browserType");
-        if (userAgent.indexOf("OPR") > -1||userAgent.indexOf("Opera") > -1) {
+        if (userAgent.indexOf("OPR") > -1||userAgent.indexOf("Opera") > -1) {//判断是否Opera浏览器
             element.innerHTML = "Opera";
             return;
-        }//判断是否Opera浏览器
-        else if (userAgent.indexOf("Firefox") > -1) {
+        }else if (userAgent.indexOf("Firefox") > -1) {//判断是否Firefox浏览器
             element.innerHTML = "FF";
             return;
-        } //判断是否Firefox浏览器
-        else   if (userAgent.indexOf("Chrome") > -1){
+        }else if (userAgent.indexOf("Chrome") > -1){//判断是否Chrome浏览器
             element.innerHTML = "Chrome";
             return;
-        }
-        else   if (userAgent.indexOf("Safari") > -1) {
+        }else if (userAgent.indexOf("Safari") > -1) {//判断是否Safari浏览器
             element.innerHTML = "Safari";
             return;
-        } //判断是否Safari浏览器
-        else{
-            element.innerHTML = "其他";
+        }else{
+            element.innerHTML = "我也不知道啊";
         }
     })()
 </script>
